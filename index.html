@@ -14,7 +14,7 @@
         table,
         tr,
         td {
-            border: solid black;
+            border:solid black;
             border-collapse: collapse;
         }
 
@@ -435,8 +435,129 @@
                 <input type="radio" id="eid"> <label>EID</label>
             </td>
         </tr>
-    </tr>
+        <tr>
+            <td><input type="checkbox" id="aadh"></td>
+            <td>
+                <span>*</span> AADHAAR number:
+            </td>
+            <td>
+                <input type="text" id="aadha"></br><label style="color:blue; font-style: italic; font-weight: bold">In case AADHAAR number is provided,</label></br>
+                <label style="color:blue; font-style: italic; font-weight: bold"> then proof of AADHAAR along with supporting documents it be submitted to NSDL</label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span>*</span><label style="color: black; font-size: x-small">Name as per AADHAAR letter </label></br>
+            <label style="color: black;  font-size: x-small"> or </label></br>
+            <label style="color: black;  font-size: x-small">as per the enrollment ID of Aadhaar application form</label>
+            </td>
+            <td><input style=width:90% type="text" id="aadtx"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>13.GSTN </td>
+            <td><input type="text" id="gstn"></td>
+        </tr>
+        <tr>
+        <td><input type="checkbox" id="ch1"></td>
+        <td colspan="2">14. Mention other Permanent Account Numbers (PANs) if any, Inadvertenly alloted to you.
+            <u> Submit proof of surrendered PAN(s) along with the application.</u></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> PAN1 <input type="text" id="pan1"> </td>
+            <td> PAN2 <input type="text" id="pan2"> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> PAN3 <input type="text" id="pan3"> </td>
+            <td> PAN4 <input type="text" id="pan4"> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">15. Verification </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">I/We <input style=width:46% type="text" id="tx1"> , the applicant, in the capacity of <select> <option>--Please Select--</option></select> do hereby delcare that what is stated above is true to the best of my information and belief.</br> 
+                I have enclosed <input style=width:3% type="text" id="tx2"> (number of documents) in the support of proposed changes/corrections.
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">Place <input type="text" id="pl"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2"><label style="padding-left: 08%;">DD MM YYYY</label> </br>
+            Verified today,the  
+            </td>
+         <tr>
+             <td></td>
+             <td colspan="2">I/We have enclosed</br> 
+                <select style=width:95%><option>--Please Select--</option></select>
+                as proof of identity, <select style=width:80%><option>--Please Select--</option></select>
+                as proof of address,<select style=width:88%><option>--Please Select--</option></select>
+                as proof of date of birth and <select style=width:15%><option>--Please Select--</option></select>
+                as proof of PAN alloted. 
+            </td>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    <label style="padding-right: 3%;">Whether you wish to have ? </label>
+                    <input type="radio" id="pan1"><label style="padding-right: 3%;"> Physical PAN Card & e-PAN Card </label>
+                    <input type="radio" id="pan2"><label style="padding-right: 3%;"> Only e-PAN Card </label> 
+                    <u> Fee Applicable</u>
+                </td>
+                <tr>
+                    <td></td>
+                    <td colspan="2">Other Details</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">1. Depository Account Details</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2"><label>DP ID: </label><input type="text" id="dp">
+                    <label>Client ID:</label><input type="text" id="ct">    
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">2.Payment Details</td>
+                </tr>
+            </tr>
+            <tr>
+                <td><input type="radio" id="op"></td>
+                <td colspan="2">Online Payment</td>
+
+            </tr>
+        </tr>
     </table>
+    </div>
+    <div>
+        <lable> For Paperless PAN Application</lable>
+        <input type="radio" id="yes1"> <label>Yes</label>
+        <input type="radio" id="no1"> <label>No</label></br>
+        <input type="radio" id="dsc"><label>DSC</label>
+        <select><option>--Select--</option></select>
+        <span><u>Guidelines for DSC user</u></span></br>
+        <label style="padding-right: 40%;">Upload Photo</label>
+        <input type="file" id="fl">
+        <label>Upload Signature</label>
+        <input type="file" id="us"> </br>
+        <label style="padding-right: 38%;">Upload Document</label>
+        <input style="padding-right: 31%" type="file" id="up">
+        <label>OR</label></br>
+        <label style="padding-right: 31%">ALREADY UPLOADED PHOTO:</label>
+        <input type="text" id="up" style="width: 20%;"> </br>
+        <label style="padding-right: 28.7%">ALREADY UPLOADED SIGNATURE:</label>
+        <input type="text" id="ups" style="width: 10%;"> </br>
+        <label style="padding-right: 28%">ALREADY UPLOADED DOCUMENTS:</label>
+        <input type="text" id="upd"> </br>
+        <label style="padding-right: 50%;"></label>
+        <input type="button" value="Submit" id="sub">
     </div>
 </body>
 
