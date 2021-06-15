@@ -45,9 +45,9 @@
                         <p style="display: inline;"><span>*</span>Whether applicant is citizen of India</p>
                         <div style="display:inline;">
                             <label for='yes' style="padding-left: 2%;">Yes</label>
-                            <input type="radio" id="yes">
+                            <input type="radio" id="yes" name='cit' value='Yes'>
                             <label for='no' style="padding-left: 2%;">No</label>
-                            <input type="radio" id="no">
+                            <input type="radio" id="no" name='cit' value='No'>
                         </div>
                     </td>
                 </tr>
@@ -55,7 +55,7 @@
                     <td></td>
                     <td colspan="2">
                         <label for="pan"><span>*</span>Permanent Account Number (PAN)</label>
-                        <input type="text" id="pan">
+                        <input type="text" id="panac">
         </div>
         </td>
         </tr>
@@ -71,11 +71,11 @@
                 <p style="display: inline;">Title</p>
                 <div style="display:inline;"></div>
                 <label for='yes' style="padding-left: 2%;">Shri/Mr</label>
-                <input type="radio" id="mr">
+                <input type="radio" id="mr" value="Shri/Mr" name="title">
                 <label for='yes' style="padding-left: 2%;">Smt/Mrs</label>
-                <input type="radio" id="mrs">
+                <input type="radio" id="mrs" value="Smt/Mrs" name="title">
                 <label for='no' style="padding-left: 2%;">Kumari/Ms</label>
-                <input type="radio" id="ms">
+                <input type="radio" id="ms" value="Kumari/Ms" name="title">
     </div>
     </td>
     </tr>
@@ -102,7 +102,7 @@
     <tr>
         <td></td>
         <td colspan="2">
-            <input type="text" id="dis">
+            <input type="text" id="dis" style="width: 20%;">
         </td>
     </tr>
     <tr>
@@ -120,9 +120,9 @@
         <td>
             <div style="display:inline;">
                 <label for='yes'>Yes</label>
-                <input type="radio" id="yes">
+                <input type="radio" id="sm" name="ms" value='Yes'>
                 <label for='no' style="padding-left: 2%;">No</label>
-                <input type="radio" id="no">
+                <input type="radio" id="sm1" name="ms" value='No'>
             </div>
         </td>
     </tr>
@@ -142,9 +142,9 @@
                 <label style="padding-right: 4%;">Last Name/Surname</label>
                 <label style="padding-right: 9%;">First Name</label>
                 <label style="padding-right: 10%;">Middle Name</label></br>
-                <input type="text" id="lastname">
-                <input type="text" id="firstname">
-                <input type="text" id="middlename">
+                <input type="text" id="lastname1">
+                <input type="text" id="firstname1">
+                <input type="text" id="middlename1">
             </p>
         </td>
     </tr>
@@ -180,9 +180,9 @@
         <td>
             <div style="display:inline;">
                 <label for='FN'>Father Name</label>
-                <input type="radio" id="FN">
+                <input type="radio" id="FN" name='ptn'>
                 <label for='MN' style="padding-left: 2%;">Mother Name</label>
-                <input type="radio" id="MN">
+                <input type="radio" id="MN" name='ptn'>
             </div>
         </td>
     </tr>
@@ -256,11 +256,11 @@
         <td>
             <div style="display:inline;">
                 <label for='male'>Male</label>
-                <input type="radio" id="male">
+                <input type="radio" id="male" name=gen>
                 <label for='female' style="padding-left: 2%;">Female</label>
-                <input type="radio" id="female">
+                <input type="radio" id="female" name=gen>
                 <label for='trans' style="padding-left: 2%;">TransGender</label>
-                <input type="radio" id="trans">
+                <input type="radio" id="trans" name=gen>
             </div>
         </td>
     </tr>
@@ -284,9 +284,9 @@
         <td>
             <div style="display:inline;">
                 <label for='res'>Residential</label>
-                <input type="radio" id="res">
+                <input type="radio" id="res" name="addr">
                 <label for='off' style="padding-left: 2%;">Office</label>
-                <input type="radio" id="off">
+                <input type="radio" id="off" name="addr">
         </td>
     </tr>
     <tr>
@@ -411,8 +411,8 @@
                     <option>India +91</option>
             </select></td></tr>
             <tr>
-                <td><input type="radio" id="mo"> Mobile No.</td>
-                <td><input type="radio" id="tl"> Telophone No.</td>
+                <td><input type="radio" id="mo" name=num> Mobile No.</td>
+                <td><input type="radio" id="tl" name=num> Telophone No.</td>
             </tr>
             <tr>
                 <td>Area/STD Code</br>
@@ -431,8 +431,8 @@
         <tr>
             <td></td>
             <td><label style="color: dimgray; font-style: italic; font-size: x-small">In case of a citizen of India, then</label></td>
-            <td><input type="radio" id="ad"> <label style="padding-right: 03%;">AADHAAR</label>
-                <input type="radio" id="eid"> <label>EID</label>
+            <td><input type="radio" id="ad" name=idp> <label style="padding-right: 03%;">AADHAAR</label>
+                <input type="radio" id="eid" name=idp> <label>EID</label>
             </td>
         </tr>
         <tr>
@@ -505,8 +505,8 @@
                 <td></td>
                 <td colspan="2">
                     <label style="padding-right: 3%;">Whether you wish to have ? </label>
-                    <input type="radio" id="pan1"><label style="padding-right: 3%;"> Physical PAN Card & e-PAN Card </label>
-                    <input type="radio" id="pan2"><label style="padding-right: 3%;"> Only e-PAN Card </label> 
+                    <input type="radio" id="pan1" name=cpan><label style="padding-right: 3%;"> Physical PAN Card & e-PAN Card </label>
+                    <input type="radio" id="pan2" name=cpan><label style="padding-right: 3%;"> Only e-PAN Card </label> 
                     <u> Fee Applicable</u>
                 </td>
                 <tr>
@@ -538,8 +538,8 @@
     </div>
     <div>
         <lable> For Paperless PAN Application</lable>
-        <input type="radio" id="yes1"> <label>Yes</label>
-        <input type="radio" id="no1"> <label>No</label></br>
+        <input type="radio" id="yes1" name='paprl'> <label>Yes</label>
+        <input type="radio" id="no1" name='paprl'> <label>No</label></br>
         <input type="radio" id="dsc"><label>DSC</label>
         <select><option>--Select--</option></select>
         <span><u>Guidelines for DSC user</u></span></br>
@@ -557,8 +557,38 @@
         <label style="padding-right: 28%">ALREADY UPLOADED DOCUMENTS:</label>
         <input type="text" id="upd"> </br>
         <label style="padding-right: 50%;"></label>
-        <input type="button" value="Submit" id="sub">
+        <input type="button" value="Submit" id="sub" onclick="foo()">
     </div>
 </body>
-
+<script>
+    function foo()
+    {
+        var arr =[]
+        let ele
+        let ele1
+        ele1 = document.getElementsByName("cit")
+        for (let j=0;j<ele1.length;j++)
+        {
+            if (ele1[j].checked)
+            {
+                arr[0] = ele1[j].value
+            }
+        }
+        
+        ele = document.getElementsByName("title")
+             
+            for (let i=0;i<ele.length;i++)
+            {
+                if (ele[i].checked)
+                {
+                    arr[1] = ele[i].value
+                }
+            }
+        
+        arr[2] = document.getElementById("lastname").value
+        arr[3] = document.getElementById("firstname").value
+        arr[4] = document.getElementById("dis").value
+        alert(arr)
+    }
+</script>
 </html>
