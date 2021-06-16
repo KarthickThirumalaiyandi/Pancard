@@ -75,7 +75,7 @@
                 <label for='yes' style="padding-left: 2%;">Smt/Mrs</label>
                 <input type="radio" id="mrs" value="Smt/Mrs" name="title">
                 <label for='no' style="padding-left: 2%;">Kumari/Ms</label>
-                <input type="radio" id="ms" value="Kumari/Ms" name="title">
+                <input type="radio" id="msk" value="Kumari/Ms" name="title">
     </div>
     </td>
     </tr>
@@ -163,9 +163,9 @@
                 <label style="padding-right: 4%;">Last Name/Surname</label>
                 <label style="padding-right: 9%;">First Name</label>
                 <label style="padding-right: 10%;">Middle Name</label></br>
-                <input type="text" id="lastname">
-                <input type="text" id="firstname">
-                <input type="text" id="middlename">
+                <input type="text" id="lastname2">
+                <input type="text" id="firstname2">
+                <input type="text" id="middlename2">
             </p>
         </td>
     </tr>
@@ -180,9 +180,9 @@
         <td>
             <div style="display:inline;">
                 <label for='FN'>Father Name</label>
-                <input type="radio" id="FN" name='ptn'>
+                <input type="radio" id="FN" name="ptn" value="father name">
                 <label for='MN' style="padding-left: 2%;">Mother Name</label>
-                <input type="radio" id="MN" name='ptn'>
+                <input type="radio" id="MN" name="ptn" value="mother Name">
             </div>
         </td>
     </tr>
@@ -561,11 +561,13 @@
     </div>
 </body>
 <script>
-    function foo()
+function foo()
     {
         var arr =[]
         let ele
         let ele1
+        let ele2
+        let ele3 
         ele1 = document.getElementsByName("cit")
         for (let j=0;j<ele1.length;j++)
         {
@@ -585,10 +587,39 @@
                 }
             }
         
-        arr[2] = document.getElementById("lastname").value
-        arr[3] = document.getElementById("firstname").value
-        arr[4] = document.getElementById("dis").value
+        arr[2] = document.getElementById("panac").value
+        arr[3] = document.getElementById("lastname").value
+        arr[4] = document.getElementById("firstname").value
+        arr[5] = document.getElementById("middlename").value
+        arr[6] = document.getElementById("dis").value
+        ele2 = document.getElementsByName("ms")
+        for (let k=0;k<ele2.length;k++)
+            {
+                if (ele2[k].checked)
+                {
+                    arr[7] = ele2[k].value
+                }
+            }
+            
+            ele3 = document.getElementsByName("ptn")
+            if (ele3[0].checked)
+                {
+                    arr[8] = document.getElementById("lastname1").value + document.getElementById("firstname1").value + document.getElementById("middlename1").value 
+                }
+                else
+                {
+                    if (ele3[1].checked)                
+                    {
+                       arr[8] = document.getElementById("lastname2").value + document.getElementById("firstname2").value + document.getElementById("middlename2").value
+                    }
+                    else
+                    {
+                        arr[8] = document.getElementById("lastname1").value + document.getElementById("firstname1").value + document.getElementById("middlename1").value
+                    }
+                 }
+    
         alert(arr)
     }
+
 </script>
 </html>
